@@ -1,79 +1,15 @@
-# karma-hydro
+# hydro-karma-adapter
 
 ## Synopsis
 
-Karma plugin for [hydro](https://github.com/hydrojs/hydro).
+[hydro](//github.com/hydrojs/hydro) plugin to forward test results to [karma](//karma-runner.github.io).
 
 ## Installation
 
 ```
-npm install karma-hydro
+npm install hydro-karma-adapter
 ```
 
-## Configuration
-
-```js
-// karma.conf.js
-
-module.exports = function(config) {
-  config.set({
-    frameworks: ['hydro'],
-
-    files: [
-      'test/*.js'
-    ],
-
-    hydro: { path: 'custom-path-to-hydro.js' }, // optional
-
-    client: {
-      hydro: {
-        // hydro & hydro plugins options
-
-        plugins: ['hydro-bdd' /* ... */]
-        timeout: 2000,
-        // ...
-
-        // karma specific options
-
-        setup: true // instantaneous setup, optional, default: false
-      }
-    }
-  });
-};
-```
-
-In most of the cases you might want to defer the hydro setup, because you want karma
-to include your plugins, prepare the environment manually or what have you.
-
-Hydro will set itself up with karma, but it won't call the `setup` method so you
-can do it yourself later on.
-
-Here is an example of how you can accomplish this:
-
-```js
-// karma.conf.js
-
-module.exports = function(config) {
-  config.set({
-    frameworks: ['hydro'],
-
-    files: [
-      'hydro-bdd',
-      'hydro-whatever',
-      'hydro.karma.js', // this is where you could call `setup`
-      'test/*.js'
-    ],
-  });
-};
-```
-
-```js
-// hydro.karma.js
-
-/* setup stuff, do whatever */
-
-hydro.setup(); // here we setup hydro explicitly
-```
 ## License
 
 The MIT License (see LICENSE)
