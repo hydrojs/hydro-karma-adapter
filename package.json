@@ -6,5 +6,6 @@
   "homepage": "https://github.com/hydrojs/karma-hydro",
   "repository": "https://github.com/hydrojs/karma-hydro",
   "author": "Veselin Todorov <hi@vesln.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "files": ["index.js"]
 }
