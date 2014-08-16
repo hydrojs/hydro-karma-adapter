@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "Karma plugin - adapter for Hydro",
   "keywords": [ "hydro-plugin", "karma-adapter", "hydro"],
-  "homepage": "https://github.com/hydrojs/karma-hydro",
-  "repository": "https://github.com/hydrojs/karma-hydro",
+  "homepage": "https://github.com/hydrojs/karma-adapter",
+  "repository": "https://github.com/hydrojs/karma-adapter",
   "author": "Veselin Todorov <hi@vesln.com>",
   "license": "MIT",
   "files": ["index.js"]
